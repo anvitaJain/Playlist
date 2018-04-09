@@ -27,8 +27,7 @@ import com.playlistExtractor.pojos.Video;
  * 2.b process the input file to get relevant playlists in ordered way. 
  * 2.c return the list of ordered videos to form the playlist. 
  * Assumption: 
- * There will be only one content pertaining to a specific content name in json input file,  Like for MI3 there wont be another content bolck. 
- * There will be only one preroll pertaining to a specific preroll name in json input file
+ * There will be only one content pertaining to a specific content name in json input file,  Like for MI3 there wont be another content block. 
  * There can be 0 or more contents in the json input file
  * There can be 0 or more prerolls in the json input file
  */
@@ -54,7 +53,7 @@ public class Processor {
 		List<Content> contents = inputData.getContent().stream().filter(c -> c.getName().equals(contentNameFromUser)).collect(Collectors.toList());
 		if (!contents.isEmpty()) {
 			List<String> prerollNamesFromContent = contents.get(0).getPreroll().stream().map(Preroll::getName)
-					.collect(Collectors.toList());
+					.collect(Collectors.toList()); //Getting the first content as there will be only one content block per content name(assumption)
 			List<Preroll> prerollsToProcessFromFile = inputData.getPreroll().stream()
 					.filter(p -> prerollNamesFromContent.contains(p.getName())).collect(Collectors.toList());
 			for (Preroll preroll : prerollsToProcessFromFile) {

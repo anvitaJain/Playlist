@@ -86,7 +86,7 @@ public class Processor {
 		StringBuilder key = new StringBuilder();
 		key.append(country).append("_").append(video.getAttributes().getLanguage());
 		key.toString();
-		return key.toString();
+		return key.toString(); 
 	}
 
 	private void validateInput(String contentNameFromUser, String countryFromUser, InputFileObject inputData)

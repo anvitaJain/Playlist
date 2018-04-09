@@ -17,5 +17,5 @@ Assumptions:
 3. There can be 0 or more contents in the json input file
 4. There can be 0 or more prerolls in the json input file
 
-
-
+Pojo for Clients: 
+Playlist.java

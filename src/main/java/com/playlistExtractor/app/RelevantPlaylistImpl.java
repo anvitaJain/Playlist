@@ -14,10 +14,10 @@ import com.pllaylistExtractor.utils.Processor;
  */
 public class RelevantPlaylistImpl implements RelevantPlaylist{ 
 	/*Wrote this main method to run the program locally for debugging purpose. 
-	* Can be uncommented if needed. But not to be shipped with jar
+	* Should not be shipped with jar.
 	*/
 	
-	/*public static void main( String[] args ) throws IOException, InvalidInputException
+	public static void main( String[] args ) throws IOException, InvalidInputException
     {
 	   
 	 Processor processor = new Processor();
@@ -28,8 +28,8 @@ public class RelevantPlaylistImpl implements RelevantPlaylist{
 	 System.out.println(processor.processPlaylist("MI3", "UK", inputObjectFromFile));
 	 System.out.println(processor.processPlaylist("MI3", "US", inputObjectFromFile));
 	 System.out.println(processor.processPlaylist("MI3", "CA", inputObjectFromFile));
-	// System.out.println(processor.processPlaylist("StarWars", "IND", inputObjectFromFile));
-    }*/
+	 System.out.println(processor.processPlaylist("StarWars", "IND", inputObjectFromFile));
+    }
    
    public Set<ArrayList<String>> getRelevantPlaylist(String content, String country, String jsonFileInput) throws JsonParseException, JsonMappingException, NullPointerException, IOException, InvalidInputException {
 	   Processor processor = new Processor();

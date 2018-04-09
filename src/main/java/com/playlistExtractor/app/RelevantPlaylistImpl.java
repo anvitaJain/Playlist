@@ -17,9 +17,7 @@ public class RelevantPlaylistImpl implements RelevantPlaylist{
 	 * Should not be shipped with jar. Remove this when shipping out. 
 	 */
 	
-	public static void main( String[] args ) throws IOException, InvalidInputException
-    {
-		
+	public static void main( String[] args ) throws IOException, InvalidInputException{
 	 RelevantPlaylistImpl impl = new RelevantPlaylistImpl();
 	 System.out.println(impl.getRelevantPlaylist(args[0], args[1], args[2]));
 	 
